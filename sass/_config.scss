@@ -1,0 +1,92 @@
+// google fonts
+// barlow font font-family: 'Barlow', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+//frainces font font-family: 'Fraunces', serif;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+//variables
+$global-padding: 10vw;
+
+// colors
+$dark: hsl(212, 27%, 19%);
+$darker-grey: hsl(213, 9%, 39%);
+$dark-grey: hsl(232, 10%, 55%);
+$gray: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$light-primary: hsla(200, 100%, 72%, 1);
+$darker-primary: hsla(167, 44%, 70%, 1);
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  //box-sizing: ;
+}
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+// typography
+h1 {
+  //headline title
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: 3rem;
+}
+h2 {
+  //services title
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+h3 {
+  //projects title
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+h4 {
+  //testimonials title
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+}
+h5 {
+  //author name
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+h6 {
+  //author creddential
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+}
+p {
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+button {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  border: none;
+  background: none;
+  letter-spacing: 0.2em;
+}
+.nav-link > a {
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+a {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+// img {
+//   max-width: 100%;
+// }

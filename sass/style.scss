@@ -1,4 +1,84 @@
-body {
-  margin: 0;
-  padding: 0;
+@import "config";
+
+header {
+  .nav-link > a {
+    color: $white;
+  }
+  #header-contact {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    background: $light-primary;
+  }
+}
+
+.hero {
+  background: url(/images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  .content {
+    margin-top: 180px !important;
+    color: $white;
+  }
+}
+
+.services {
+  .service {
+    .content {
+      padding: $global-padding !important;
+      a {
+        color: $dark;
+      }
+    }
+  }
+  & > *:nth-child(1) > .content > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    background: hsla(48, 97%, 87%, 1);
+    width: 100%;
+    z-index: -1;
+    border-radius: 50px;
+  }
+  & > *:nth-child(2) > .content > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    background: hsla(13, 91%, 91%, 1);
+    width: 100%;
+    z-index: -1;
+    border-radius: 50px;
+  }
+}
+
+.projects {
+  .project {
+    .content {
+      top: 65%;
+      padding: 0 $global-padding !important;
+    }
+  }
+}
+
+.testimonials {
+  padding: 25vh 0 !important;
+
+  .content {
+    padding: 0 $global-padding !important;
+
+    .photo {
+      clip-path: circle();
+      aspect-ratio: 1/1;
+      width: 5vw;
+    }
+  }
+}
+
+footer {
+  height: 50vh;
+  background: $darker-primary;
 }
