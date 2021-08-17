@@ -5,17 +5,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 
 //variables
-$global-padding: 10vw;
+//$global-padding: 10vw;
+$global-padding: 0 10vw;
 
 // colors
-$dark: hsl(212, 27%, 19%);
-$darker-grey: hsl(213, 9%, 39%);
-$dark-grey: hsl(232, 10%, 55%);
-$gray: hsl(210, 4%, 67%);
-$white: hsl(0, 0%, 100%);
-$light-primary: hsla(200, 100%, 72%, 1);
-$darker-primary: hsla(167, 44%, 70%, 1);
 
+$pop-red: hsl(7, 99%, 70%);
+$pop-yellow: hsl(51, 100%, 49%);
+
+$secondary-cyan: hsl(167, 40%, 24%); //graphhic
+$secondary-blue: hsl(198, 62%, 26%); //photography
+$secondary-cyan-dark: hsl(168, 34%, 41%);
+
+$dark: hsl(212, 27%, 19%);
+$grey-darker: hsl(213, 9%, 39%);
+$grey-dark: hsl(232, 10%, 55%);
+$grey: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+$primary: hsla(200, 100%, 72%, 1);
+$primary-light: hsla(167, 44%, 70%, 1);
+
+//global settings
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -32,13 +43,13 @@ h1 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   letter-spacing: 0.2em;
-  font-size: 3rem;
+  font-size: clamp(2.3rem, 10vw, 3rem);
 }
 h2 {
   //services title
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
 }
 h3 {
   //projects title
@@ -66,6 +77,8 @@ h6 {
 }
 p {
   font-size: 1rem;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-family: "Barlow", sans-serif;
 }
 button {

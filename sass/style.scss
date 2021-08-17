@@ -1,33 +1,64 @@
 @import "config";
 
+// header
 header {
+  .navbar-nav {
+    gap: 1em;
+    gap: 3em;
+    gap: clamp(1em, 5vw, 3em);
+  }
   .nav-link > a {
     color: $white;
+    // font-size: 0.8rem;
+    // font-size: 2vw;
+    font-size: clamp(0.8rem, 2vw, 1rem);
   }
   #header-contact {
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    background: $light-primary;
+    background: $white;
+
+    a {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      color: $dark;
+    }
+    &:hover > a {
+      color: $white;
+    }
+  }
+  #header-contact:hover {
+    background: $primary;
   }
 }
 
+// hero
 .hero {
   background: url(/images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
+  min-height: 60vh;
   .content {
     margin-top: 180px !important;
     color: $white;
   }
 }
 
-$yellow: #f5cf09;
-$pink: #fc7565;
+// services
 .services {
   .service {
+    .image > img {
+      object-fit: cover;
+    }
     .content {
       padding: $global-padding !important;
+      min-height: 350px;
+
+      .title {
+        color: $dark;
+      }
+      .description {
+        color: $grey-dark;
+      }
       a {
         color: $dark;
       }
@@ -40,7 +71,7 @@ $pink: #fc7565;
     left: 0;
     bottom: 0;
     height: 10px;
-    background: lighten($yellow, 30%);
+    background: lighten($pop-yellow, 30%);
     width: 100%;
     z-index: -1;
     border-radius: 50px;
@@ -52,7 +83,7 @@ $pink: #fc7565;
     left: 0;
     bottom: 0;
     height: 10px;
-    background: lighten($pink, 20%);
+    background: lighten($pop-red, 20%);
     width: 100%;
     z-index: -1;
     border-radius: 50px;
@@ -60,25 +91,41 @@ $pink: #fc7565;
   }
 
   & > *:nth-child(1) > .content > a:hover::after {
-    background: $yellow;
+    background: $pop-yellow;
   }
   & > *:nth-child(2) > .content > a:hover::after {
-    background: $pink;
+    background: $pop-red;
   }
 }
 
+// projects
 .projects {
   .project {
+    min-height: 400px;
+
     .content {
       top: 65%;
-      padding: 0 $global-padding !important;
+      padding: $global-padding !important;
     }
+    .background {
+      object-fit: cover;
+    }
+  }
+  & > *:nth-child(1) {
+    color: $secondary-cyan;
+  }
+  & > *:nth-child(2) {
+    color: $secondary-blue;
   }
 }
 
+// tewstimonials
 .testimonials {
   padding: 25vh 0 !important;
 
+  .title {
+    color: $grey;
+  }
   .content {
     padding: 0 $global-padding !important;
 
@@ -87,10 +134,49 @@ $pink: #fc7565;
       aspect-ratio: 1/1;
       width: 5vw;
     }
+    .quote {
+      color: $grey-dark;
+    }
+    .author {
+      .name {
+        color: $dark;
+      }
+      .credential {
+        color: $grey;
+      }
+    }
   }
 }
 
+// footer
 footer {
   height: 50vh;
-  background: $darker-primary;
+  background: $primary-light;
+  //color: $dark-grey;
+
+  .logo > svg > path {
+    fill: $secondary-cyan-dark;
+  }
+  nav > .nav > .nav-link > a {
+    color: $secondary-cyan-dark;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+  }
+  .social-links > .nav > .nav-link > a {
+    svg > path {
+      fill: $secondary-cyan-dark;
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover > svg > path {
+      fill: $white;
+    }
+  }
+}
+
+// custom classes
+.p-content {
+  padding: 10vw;
 }
