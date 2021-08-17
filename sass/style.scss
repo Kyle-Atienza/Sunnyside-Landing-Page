@@ -3,30 +3,30 @@
 // header
 header {
   .navbar-nav {
-    gap: 1em;
-    gap: 3em;
     gap: clamp(1em, 5vw, 3em);
-  }
-  .nav-link > a {
-    color: $white;
-    // font-size: 0.8rem;
-    // font-size: 2vw;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-  }
-  #header-contact {
-    background: $white;
 
-    a {
-      font-family: "Fraunces", serif;
-      font-weight: 700;
-      color: $dark;
+    .nav-link {
+      a {
+        color: $white;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+      }
     }
-    &:hover > a {
-      color: $white;
+    #header-contact {
+      background: $white;
+
+      a {
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        color: $dark;
+      }
+      &:hover > a {
+        color: $white;
+      }
     }
-  }
-  #header-contact:hover {
-    background: $primary;
+    #header-contact:hover {
+      // background: $primary;
+      @include background-opacity($white, 0.5);
+    }
   }
 }
 
@@ -38,7 +38,8 @@ header {
   height: 100vh;
   min-height: 60vh;
   .content {
-    margin-top: 180px !important;
+    //margin-top: 180px !important;
+    height: max-content;
     color: $white;
   }
 }
@@ -104,7 +105,7 @@ header {
     min-height: 400px;
 
     .content {
-      top: 65%;
+      bottom: 15%;
       padding: 0 12vw !important;
     }
     .background {
@@ -113,32 +114,28 @@ header {
   }
   & > *:nth-child(1) {
     color: $secondary-cyan;
-    background: url(/images/desktop/image-graphic-design.jpg);
-    background-position: center;
-    background-size: cover;
   }
   & > *:nth-child(2) {
     color: $secondary-blue;
-    background: url(/images/desktop/image-photography.jpg);
-    background-position: center;
-    background-size: cover;
   }
 }
 
 // tewstimonials
 .testimonials {
-  padding: 25vh 0 !important;
+  padding: clamp(5em, 10vw, 7em) 0 !important;
 
   .title {
     color: $grey;
   }
   .content {
-    padding: 0 $global-padding !important;
+    padding: $global-padding !important;
 
     .photo {
       clip-path: circle();
       aspect-ratio: 1/1;
       width: 5vw;
+      width: 4em;
+      width: Min(5vw 4em);
     }
     .quote {
       color: $grey-dark;
@@ -182,7 +179,35 @@ footer {
   }
 }
 
-// custom classes
-.p-content {
-  padding: 10vw;
+// break points
+@media (max-width: 576px) {
+  header > .content > nav {
+    transform: translateY(10%) !important;
+    .tip {
+      transform: translateY(-90%) !important;
+    }
+    .navbar-nav {
+      padding: 2em !important;
+      background: $white;
+
+      .nav-link > a {
+        color: $grey;
+        font-size: 1rem;
+      }
+      #header-contact {
+        background: $pop-yellow;
+
+        a:hover {
+          color: $dark;
+        }
+      }
+      #header-contact:hover {
+        @include background-opacity($pop-yellow, 0.5);
+      }
+    }
+  }
+
+  .hero {
+    height: 80vh;
+  }
 }
