@@ -105,7 +105,7 @@ header {
 
     .content {
       top: 65%;
-      padding: $global-padding !important;
+      padding: 0 12vw !important;
     }
     .background {
       object-fit: cover;
@@ -113,9 +113,15 @@ header {
   }
   & > *:nth-child(1) {
     color: $secondary-cyan;
+    background: url(/images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: cover;
   }
   & > *:nth-child(2) {
     color: $secondary-blue;
+    background: url(/images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
   }
 }
 
