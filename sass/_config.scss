@@ -1,0 +1,107 @@
+// google fonts
+// barlow font font-family: 'Barlow', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+//frainces font font-family: 'Fraunces', serif;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+//variables
+//$global-padding: 10vw;
+$global-padding: 0 10vw;
+
+// colors
+
+$pop-red: hsl(7, 99%, 70%);
+$pop-yellow: hsl(51, 100%, 49%);
+
+$secondary-cyan: hsl(167, 40%, 24%); //graphhic
+$secondary-blue: hsl(198, 62%, 26%); //photography
+$secondary-cyan-dark: hsl(168, 34%, 41%);
+
+$dark: hsl(212, 27%, 19%);
+$grey-darker: hsl(213, 9%, 39%);
+$grey-dark: hsl(232, 10%, 55%);
+$grey: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+$primary: hsla(200, 100%, 72%, 1);
+$primary-light: hsla(167, 44%, 70%, 1);
+
+//global settings
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  //box-sizing: ;
+}
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+// typography
+h1 {
+  //headline title
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: clamp(2.3rem, 10vw, 3rem);
+}
+h2 {
+  //services title
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+h3 {
+  //projects title
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+h4 {
+  //testimonials title
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+}
+h5 {
+  //author name
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+h6 {
+  //author creddential
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+}
+p {
+  font-size: 1rem;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-family: "Barlow", sans-serif;
+}
+button {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  border: none;
+  background: none;
+  letter-spacing: 0.2em;
+}
+.nav-link > a {
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+a {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+//mixin
+@mixin background-opacity($color, $opacity) {
+  background-color: $color; /* The Fallback */
+  background-color: rgba($color, $opacity);
+}
