@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/Kyle-Atienza/Sunnyside-Landing-Page/settings/pages)
-- Live Site URL: [Github Pages](https://kyle-atienza.github.io/Sunnyside-Landing-Page/)
+- Live Site URL: [Netlify](https://kyle-fem-sunnyside.netlify.app/)
 
 ## My process
 
